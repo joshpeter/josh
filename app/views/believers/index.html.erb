@@ -1,0 +1,35 @@
+<h1>Listing believers</h1>
+
+<table class="table">
+  <tr>
+    <th width="10%">Name</th>
+    <th width="20%">Email</th>
+    <th width="12%">Phone</th>
+    <th width="10%">Status</th>
+    <th width="15%">Dob</th>
+    <th width="15%">Anniversary</th>
+    <th width="15%">Spouse</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @believers.each do |believer| %>
+  <tr>
+    <td><%= believer.name %></td>
+    <td><%= believer.email %></td>
+    <td><%= believer.phone %></td>
+    <td><%= believer.status %></td>
+    <td><%= believer.dob.strftime("%a, %d, %b") rescue "Not Found" %></td>
+    <td><%= believer.anniversary.strftime("%a, %d, %b") rescue "Not Found" %></td>
+    <td><%= believer.spouse rescue "Not Found"%></td>
+    <td><%= link_to 'Show', believer %></td>
+    <td><%= link_to 'Edit', edit_believer_path(believer) %></td>
+    <td><%= link_to 'Destroy', believer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+

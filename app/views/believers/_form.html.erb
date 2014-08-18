@@ -1,0 +1,51 @@
+<%= form_for(@believer) do |f| %>
+  <% if @believer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@believer.errors.count, "error") %> prohibited this believer from being saved:</h2>
+
+      <ul>
+      <% @believer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :Status %><br />
+    <%= f.select :status,options_for_select(["single","married"]) %>
+  </div>
+
+  <div class="field anniversary_div">
+    <%= f.label :anniversary %><br />
+    <%= f.date_select :anniversary %>
+  </div>
+  <div class="field spouse_div">
+    <%= f.label :spouse %><br />
+    <%= f.text_field :spouse %>
+  </div>
+  
+
+  <div class="field">
+    <%= f.label :dob %><br />
+    <%= f.date_select :dob %>
+  </div>
+  
+ 
+   <%= f.submit %>
+  </div>
+<% end %>
+   
+ 

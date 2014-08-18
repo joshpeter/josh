@@ -1,0 +1,29 @@
+header{
+	height: 30px;
+	background-color: gray;
+	text-align: center;
+	color: white;
+	font-size: 16px;
+	font-family: arial;
+	font-weight: bold;
+}
+.field label{
+	font-weight: bold;
+	color: green;
+	
+	display: inline;
+}
+.sign_out_button{
+	float: right;
+	color: red;
+}
+body .sign_out_button a {
+	color: white;
+}
+.algn{
+	float: right;
+	color: red;
+}
+body .algn a {
+	color: white;
+}
