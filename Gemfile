@@ -10,8 +10,9 @@ group :development do
 	gem 'sqlite3'
 
 end
+gem "nested_form"
 gem "pg"
-
+gem 'sorting_table_for'
 gem 'devise'
 # Gems used only for assets and not required
 # in production environments by default.

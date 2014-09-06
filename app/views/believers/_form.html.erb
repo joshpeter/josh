@@ -16,6 +16,18 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
+    <%= f.label :Gender %><br />
+    <%= f.select :gender,options_for_select(["Male","Female"]) %>
+  </div>
+   <div class="field">
+    <%= f.label :Baptised %><br />
+    <%= f.select :baptised,options_for_select(["Yes","No"]) %>
+  </div>
+  <div class="field">
+    <%= f.label :Status %><br />
+    <%= f.select :status,options_for_select(["single","married"]) %>
+  </div>
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.text_field :email %>
   </div>
@@ -24,8 +36,8 @@
     <%= f.text_field :phone %>
   </div>
   <div class="field">
-    <%= f.label :Status %><br />
-    <%= f.select :status,options_for_select(["single","married"]) %>
+    <%= f.label :Place %><br />
+    <%= f.text_field :place %>
   </div>
 
   <div class="field anniversary_div">

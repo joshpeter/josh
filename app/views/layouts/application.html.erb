@@ -4,6 +4,7 @@
   <title>Remainder App</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag :defaults, "nested_form" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -39,7 +40,10 @@
 			            	<%= link_to "Show Records", believers_path %>
 			            </li>
 			             <li>
-			                <a href="#">Delete Records</a>
+			                <%= link_to "Add Family", new_clan_path %>
+			            </li>
+			            <li>
+			                <%= link_to "Show Family", clans_path %>
 			            </li>
 			        </ul>
 			    </div>

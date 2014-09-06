@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  believer_id: 1
+  clan_id: 1
+  name: MyString
+
+two:
+  believer_id: 1
+  clan_id: 1
+  name: MyString

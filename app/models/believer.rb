@@ -1,11 +1,11 @@
 class Believer < ActiveRecord::Base
-  attr_accessible :dob, :email, :name, :phone, :status, :anniversary, :spouse
+  attr_accessible :dob, :email, :name, :phone, :status, :anniversary, :spouse, :place, :gender, :baptised
   validates_presence_of :name, :phone, :dob,  :status
   validates :phone, numericality: { only_integer: true }
   validates :phone, length: { is: 10 }
   acts_as_birthday :dob, :anniversary 
   before_save :set_anniversary
-
+  has_many :clans
 
   def set_anniversary
   	
@@ -24,3 +24,7 @@ class Believer < ActiveRecord::Base
 		counts
   end
 end
+def index
+     @believers = Believer.sorting_table(params, :name).all
+     @believer = Believer.sorting_table(params, :name).all
+    end

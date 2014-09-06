@@ -2,6 +2,8 @@ class BelieversController < ApplicationController
   # GET /believers
   # GET /believers.json
   def index
+     @believers = Believer.sorting_table(params, :name).all
+     @believer = Believer.sorting_table(params, :name).all
     @believers = Believer.all
 
     respond_to do |format|
@@ -12,9 +14,11 @@ class BelieversController < ApplicationController
 
   # GET /believers/1
   # GET /believers/1.json
+  
   def show
     @believer = Believer.find(params[:id])
-
+    @believer = Believer.sorting_table(params, :name).all
+    @believers = Believer.sorting_table(params, :name).all
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @believer }

@@ -1,4 +1,10 @@
 SecondApp::Application.routes.draw do
+  resources :kids
+
+
+  resources :clans
+
+
   get "home/index"
   devise_for :models
 

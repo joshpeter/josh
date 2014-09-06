@@ -1,0 +1,27 @@
+<h1>Listing Families</h1>
+
+<table class="table">
+  <tr>
+    <th>Father</th>
+    <th>Mother</th>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @clans.each do |clan| %>
+  <tr>
+    <td><%= clan.father_id %></td>
+    <td><%= clan.mother_id %></td>
+    <td><%= clan.kid_id %></td>
+    <td><%= link_to 'Show', clan %></td>
+    <td><%= link_to 'Edit', edit_clan_path(clan) %></td>
+    <td><%= link_to 'Destroy', clan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Clan', new_clan_path %>

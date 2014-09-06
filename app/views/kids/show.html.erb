@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Believer:</b>
+  <%= @kid.believer_id %>
+</p>
+
+<p>
+  <b>Clan:</b>
+  <%= @kid.clan_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @kid.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_kid_path(@kid) %> |
+<%= link_to 'Back', kids_path %>

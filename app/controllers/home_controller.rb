@@ -2,6 +2,7 @@ class HomeController < ApplicationController
   
   def index
     @counts = Believer.get_counts
+    @believers = Believer.sorting_table(params, :name).all
   end
 
   def today

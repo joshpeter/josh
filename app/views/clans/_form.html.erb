@@ -1,0 +1,32 @@
+<%= nested_form_for(@clan) do |f| %>
+  <% if @clan.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@clan.errors.count, "error") %> prohibited this clan from being saved:</h2>
+
+      <ul>
+      <% @clan.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Father %><br />
+    <%= f.select :father_id, options_for_select(believers) %>
+  </div>
+  <div class="field">
+    <%= f.label :Mother %><br />
+    <%= f.select :mother_id, options_for_select(believers1) %>
+  </div>
+  <div class="field">
+    <%= f.label :Children %><br />
+    <%= f.select :kid_id, options_for_select(believers2) %>
+  </div>
+
+ 
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
